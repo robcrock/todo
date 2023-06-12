@@ -21,7 +21,7 @@ export default async function Home() {
           New Gym
         </Link>
       </header>
-      <ul className="pl-4">
+      <ul>
         {gyms.map(gym => (
           <GymItem key={gym.id} {...gym} />
         ))}

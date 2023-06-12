@@ -1,19 +1,18 @@
-"use client"
+"use client";
+
+import Link from "next/link";
 
 type GymItemProps = {
-  id: string
-  name: string
-}
+  id: string;
+  name: string;
+};
 
 export function GymItem({ id, name }: GymItemProps) {
   return (
     <li className="flex gap-1 items-center">
-      <label
-        htmlFor={id}
-        className="cursor-pointer"
-      >
+      <Link className="hover:bg-slate-700 outline-none" href={`/gym/${id}`}>
         {name}
-      </label>
+      </Link>
     </li>
-  )
+  );
 }
